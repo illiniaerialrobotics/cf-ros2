@@ -31,14 +31,20 @@ For example, to load a CrazyFlie at the default position (1, -1) and the Circle 
 bash tools/crazyflie-simulation/simulator_files/gazebo/launch/sitl_singleagent.sh -m crazyflie -w circle
 ```
 
-To setup crazyswarm2, run the following in `crazyswarm2_ws`:
+To install CFLib, uninstall any current version of it and run the following in `CrazySim/crazyflie-lib-python`:
 ```
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-source install/setup.bash
-pip install "numpy<2.0"
+export SETUPTOOLS_SCM_PRETEND_VERSION=0.1.0
+pip install -e .
 ```
 
-In `crazyswarm2_ws/src/crazyswarm2/crazyflie/config/crazyflies.yaml` add the following under *robots* and *robot_types*: 
+To setup crazyswarm2, run the following in `CrazySim/crazyswarm2_ws`:
+```
+pip install catkin_pkg empy==3.3.4 lark "numpy<2.0" transforms3d
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+source install/setup.bash
+```
+
+In `crazyswarm2_ws/src/crazyswarm2/crazyflie/config/crazyflies.yaml` add the following under *robots* and *robot_types* (this is already done for you): 
 ```
 robots:
   cf_1:
