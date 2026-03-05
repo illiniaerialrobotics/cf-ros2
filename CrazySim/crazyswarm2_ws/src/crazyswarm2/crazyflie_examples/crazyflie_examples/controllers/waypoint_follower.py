@@ -41,6 +41,32 @@ class WaypointControllerNode(Node):
             np.array([1.0, -1.0, self.z_flight])    # Return and land 
         ]
 
+        # Lemniscate waypoints
+        """
+        self.waypoints = [
+            np.array([3.75, 1.0, self.z_flight]),    # Gate 1
+            np.array([5.0, 0.0, self.z_flight]),     # Gate 2
+            np.array([3.75, -1.0, self.z_flight]),   # Gate 3
+            np.array([1.25, -1.0, self.z_flight]),   # Gate 4
+            np.array([0.0, 0.0, self.z_flight]),     # Gate 5
+            np.array([1.25, 1.0, self.z_flight]),    # Gate 6
+            np.array([3.75, 1.0, self.z_flight]),    # Return to Gate 1 and land
+        ]
+        """
+
+        # U-Turn waypoints
+        """
+        self.waypoints = [
+            np.array([2.0, -1.0, self.z_flight]),    # Gate 1
+            np.array([3.5, -1.0, self.z_flight]),    # Gate 2
+            np.array([4.5, -0.25, self.z_flight]),   # Gate 3
+            np.array([3.5, 0.5, self.z_flight]),     # Gate 4
+            np.array([2.0, 0.5, self.z_flight]),     # Gate 5
+            np.array([2.0, -1.0, self.z_flight]),    # Return to Gate 1 and land
+        ]
+        """
+
+
         self.current_wp_idx = 0
         self.current_pos = np.zeros(3)
         self.is_flying = False
