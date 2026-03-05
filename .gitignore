@@ -1,0 +1,8 @@
+.venv/
+.vscode/
+
+CrazySim/crazyswarm2_ws/*
+!CrazySim/crazyswarm2_ws/src/
+
+*.csv
+
