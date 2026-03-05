@@ -76,7 +76,7 @@ To test the waypoint navigator on the Circle track, run the following commands i
 # Terminal 1
 bash tools/crazyflie-simulation/simulator_files/gazebo/launch/sitl_singleagent.sh -m crazyflie -w circle
 # Terminal 2
-ros2 launch crazyflie launch.py backend:=cflib
+ros2 launch crazyflie launch.py backend:=cflib gui:=false
 # Terminal 3
 ros2 run crazyflie_examples waypoint_follower
 ```  
