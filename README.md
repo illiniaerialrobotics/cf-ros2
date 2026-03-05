@@ -67,7 +67,7 @@ robot_types:
 If you have any other robots in `crazyflies.yaml`, either delete them or disable them. 
 
 ## Getting you started
-Controllers can/should go in `CrazySim\crazyswarm2_ws\src\crazyswarm2\crazyflie_examples\crazyflie_examples\controllers\`. You are given a waypoint controller file to start off.
+Controllers can/should go in `CrazySim\crazyswarm2_ws\src\crazyswarm2\crazyflie_examples\crazyflie_examples\controllers\`. You are given a waypoint controller file to start off. Waypoints for Circle, Leminscate, and U-Turn tracks are provided in the file. However, only Circle waypoints currently suffice for safe flight. 
 
 As you add more controllers, you can add them as entry points in `CrazySim\crazyswarm2_ws\src\crazyswarm2\crazyflie_examples\setup.cfg`. 
 

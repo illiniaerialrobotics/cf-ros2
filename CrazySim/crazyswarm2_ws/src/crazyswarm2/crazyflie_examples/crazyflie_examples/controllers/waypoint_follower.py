@@ -21,6 +21,9 @@ class WaypointControllerNode(Node):
         self.z_flight = 0.355
         self.speed = 0.5   
 
+        # Circle waypoints
+        # Currently, these waypoints should suffice to safely fly through the track.
+        # You may want to edit/add more waypoints. 
         self.waypoints = [
             # --- GATE 1 (at 1.0, 0.0, rotated 90 deg) ---
             np.array([1.0, -1.0, self.z_flight]),   # Approach Gate 1 
@@ -42,7 +45,10 @@ class WaypointControllerNode(Node):
         ]
 
         # Lemniscate waypoints
+        # Currently, these waypoints are the coordinates of the gates. 
+        # You may want to edit/add more waypoints to prevent crashes and have smoother flight.
         """
+        C
         self.waypoints = [
             np.array([3.75, 1.0, self.z_flight]),    # Gate 1
             np.array([5.0, 0.0, self.z_flight]),     # Gate 2
@@ -55,6 +61,8 @@ class WaypointControllerNode(Node):
         """
 
         # U-Turn waypoints
+        # Currently, these waypoints are the coordinates of the gates. 
+        # You may want to edit/add more waypoints to prevent crashes and have smoother flight.
         """
         self.waypoints = [
             np.array([2.0, -1.0, self.z_flight]),    # Gate 1
@@ -65,8 +73,7 @@ class WaypointControllerNode(Node):
             np.array([2.0, -1.0, self.z_flight]),    # Return to Gate 1 and land
         ]
         """
-
-
+        
         self.current_wp_idx = 0
         self.current_pos = np.zeros(3)
         self.is_flying = False
