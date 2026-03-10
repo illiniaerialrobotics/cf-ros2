@@ -12,6 +12,32 @@ If you are on a Windows/MacOS, you can access Ubuntu 22.04 via WSL2 and VMs.
 - Instructions for installing Gazebo Garden are [here](https://gazebosim.org/docs/garden/install_ubuntu/).
 
 ### Further setup
+Below are some `apt` packages you may have to install. Some of these may already be installed. Our recommendation is to continue with the setup instructions below and install packages as you encounter errors.  
+```
+build-essential
+cmake
+git
+curl
+lsb-release
+gnupg
+python3-pip
+python3-colcon-common-extensions
+python3-rosdep
+python3-vcstool
+ros-humble-desktop
+ros-humble-rclpy
+ros-humble-motion-capture-tracking
+libusb-1.0-0-dev
+libyaml-cpp-dev
+libboost-all-dev
+libeigen3-dev
+libgz-sim7-dev
+libgz-transport12-dev
+libgz-msgs9-dev
+libgz-plugin2-dev
+libgz-common5-dev
+libgz-math7-dev
+```
 
 In `CrazySim/crazyflie-firmware`, run the following commands: 
 ```
