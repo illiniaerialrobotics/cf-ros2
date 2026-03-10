@@ -20,13 +20,7 @@ class WaypointControllerNode(Node):
 
         self.z_flight = 0.355
         self.speed = 0.5   
-        
-        # self.waypoints = [
-        #     # --- GATE 1 (at 1.0, 0.0, rotated 90 deg) ---
-        #     np.array([1.0, -1.0, self.z_flight]),   # Approach Gate 1 
-        #     np.array([1.0, 0.8, self.z_flight]),    # Fly through Gate 1
 
-<<<<<<< Updated upstream
         # Circle waypoints
         # Currently, these waypoints should suffice to safely fly through the track.
         # You may want to edit/add more waypoints. 
@@ -38,54 +32,35 @@ class WaypointControllerNode(Node):
             # --- GATE 2 (at 2.5, 1.5, rotated 0 deg) ---
             np.array([1.8, 1.5, self.z_flight]),     
             np.array([3.2, 1.5, self.z_flight]),     
-=======
-        #     # --- GATE 2 (at 2.5, 1.5, rotated 0 deg) ---
-        #     np.array([1.8, 1.5, self.z_flight]),     
-        #     np.array([3.2, 1.5, self.z_flight]),     
->>>>>>> Stashed changes
 
-        #     # --- GATE 3 (at 4.0, 0.0, rotated 90 deg) ---
-        #     np.array([4.0, 0.8, self.z_flight]),    
-        #     np.array([4.0, -0.8, self.z_flight]),    
+            # --- GATE 3 (at 4.0, 0.0, rotated 90 deg) ---
+            np.array([4.0, 0.8, self.z_flight]),    
+            np.array([4.0, -0.8, self.z_flight]),    
 
-        #     # --- GATE 4 (at 2.5, -1.5, rotated 0 deg) ---
-        #     np.array([3.2, -1.5, self.z_flight]),    
-        #     np.array([1.8, -1.5, self.z_flight]),   
+            # --- GATE 4 (at 2.5, -1.5, rotated 0 deg) ---
+            np.array([3.2, -1.5, self.z_flight]),    
+            np.array([1.8, -1.5, self.z_flight]),   
 
-        #     np.array([1.0, -1.0, self.z_flight])    # Return and land 
-        # ]
+            np.array([1.0, -1.0, self.z_flight])    # Return and land 
+        ]
 
         # Lemniscate waypoints
-<<<<<<< Updated upstream
         # Currently, these waypoints are the coordinates of the gates. 
         # You may want to edit/add more waypoints to prevent crashes and have smoother flight.
         """
         C
-=======
-        
->>>>>>> Stashed changes
         self.waypoints = [
-            np.array([0, 0, self.z_flight]),
-            np.array([1.25, 1, self.z_flight]),
-
-            np.array([1.75, 0.5, self.z_flight]),
-            np.array([2.5, 0, self.z_flight]),
-            np.array([3.25, -0.5, self.z_flight]),
-
-
-            np.array([2.5, -1, self.z_flight]),
-            np.array([4, -0.5, self.z_flight]),
-            np.array([5, 0, self.z_flight]),
-            np.array([4, 0.5, self.z_flight]),
-            np.array([3.75, 1, self.z_flight]),
-            np.array([1.25, -1, self.z_flight]),
-            np.array([0, 0, self.z_flight]),
-            np.array([0, 0.5, self.z_flight])
+            np.array([3.75, 1.0, self.z_flight]),    # Gate 1
+            np.array([5.0, 0.0, self.z_flight]),     # Gate 2
+            np.array([3.75, -1.0, self.z_flight]),   # Gate 3
+            np.array([1.25, -1.0, self.z_flight]),   # Gate 4
+            np.array([0.0, 0.0, self.z_flight]),     # Gate 5
+            np.array([1.25, 1.0, self.z_flight]),    # Gate 6
+            np.array([3.75, 1.0, self.z_flight]),    # Return to Gate 1 and land
         ]
-        
+        """
 
         # U-Turn waypoints
-<<<<<<< Updated upstream
         # Currently, these waypoints are the coordinates of the gates. 
         # You may want to edit/add more waypoints to prevent crashes and have smoother flight.
         """
@@ -99,23 +74,6 @@ class WaypointControllerNode(Node):
         ]
         """
         
-=======
-        
-        # self.waypoints = [
-        #     np.array([2.0, -1.0, self.z_flight]),    # Gate 1
-        #     np.array([3.5, -1.0, self.z_flight]),    # Gate 2
-        #     np.array([4.5, -0.25, self.z_flight]),   # Gate 3
-        #     np.array([3.5, 0.5, self.z_flight]),     # Gate 4
-        #     np.array([2.0, 0.5, self.z_flight]),     # Gate 5
-        #     np.array([0.5, -1.0, self.z_flight]),    # Swing wide left to avoid gates
-        #     np.array([2.0, -1.0, self.z_flight]),    # Return to Gate 1 and land
-        # ]
-
-
-        
-
-
->>>>>>> Stashed changes
         self.current_wp_idx = 0
         self.current_pos = np.zeros(3)
         self.is_flying = False
