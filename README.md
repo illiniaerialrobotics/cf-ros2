@@ -13,6 +13,11 @@ If you are on a Windows/MacOS, you can access Ubuntu 22.04 via WSL2 and VMs.
 - Instructions for installing ROS2 Humble are [here](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
 - Instructions for installing Gazebo Garden are [here](https://gazebosim.org/docs/garden/install_ubuntu/).
 
+### Quick installation 
+Run `chmod +x setup.sh` and `./setup.sh` to run the installation script. It should take care of the virtual environment, any missing packages, and the crazyswarm2 workspace. 
+
+If installation is successful via this method, proceed to [here](#getting-you-started). If it fails, proceed to the next step to do manual installation. 
+
 ### Further setup
 Below is a command that will allow you to install packages you may need on your system. However, we recommend that you install these one by one as you encounter errors. 
 
