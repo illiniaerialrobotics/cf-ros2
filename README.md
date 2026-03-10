@@ -39,6 +39,7 @@ libgz-msgs9-dev
 libgz-plugin2-dev
 libgz-common5-dev
 libgz-math7-dev
+ros-humble-tf-transformations
 ```
 
 In `CrazySim/crazyflie-firmware`, run the following commands: 
