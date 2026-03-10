@@ -5,7 +5,7 @@ set -e
 
 echo "### Starting cf-ros2 Setup for ECE484 ###"
 
-echo "### Adding the Gazebo repository ### 
+echo "### Adding the Gazebo repository ###"
 sudo apt update
 sudo apt install curl lsb-release gnupg
 sudo curl -sSL https://packages.osrfoundation.org/gazebo.gpg \
