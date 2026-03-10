@@ -1,8 +1,12 @@
 .venv/
 .vscode/
 
-CrazySim/crazyswarm2_ws/*
-!CrazySim/crazyswarm2_ws/src/
+CrazySim/crazyswarm2_ws/cache
+CrazySim/crazyswarm2_ws/install 
+CrazySim/crazyswarm2_ws/log
+CrazySim/crazyswarm2_ws/build
+
+
 
 *.csv
 
