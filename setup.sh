@@ -5,16 +5,14 @@ set -e
 
 echo "### Starting cf-ros2 Setup for ECE484 ###"
 
+echo "### Adding the Gazebo repository ### 
 sudo apt update
 sudo apt install curl lsb-release gnupg
-
 sudo curl -sSL https://packages.osrfoundation.org/gazebo.gpg \
 -o /usr/share/keyrings/gazebo-archive-keyring.gpg
-
 echo "deb [signed-by=/usr/share/keyrings/gazebo-archive-keyring.gpg] \
 http://packages.osrfoundation.org/gazebo/ubuntu-stable \
 $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list
-
 sudo apt update
 
 # 1. Update and Install System Dependencies
