@@ -6,6 +6,8 @@ This is the software stack for autonomous CrazyFlie flight used in ECE484@UIUC. 
 ### Preliminary installations
 This stack has been tested on Ubuntu 22.04 + ROS2 Humble + Gazebo Garden. Other configurations may work but will not be supported officially as of SP26. 
 
+Please use a Python virtual enviornment when going through setup. 
+
 If you are on a Windows/MacOS, you can access Ubuntu 22.04 via WSL2 and VMs. 
 
 - Instructions for installing ROS2 Humble are [here](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
