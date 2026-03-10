@@ -5,6 +5,18 @@ set -e
 
 echo "### Starting cf-ros2 Setup for ECE484 ###"
 
+sudo apt update
+sudo apt install curl lsb-release gnupg
+
+sudo curl -sSL https://packages.osrfoundation.org/gazebo.gpg \
+-o /usr/share/keyrings/gazebo-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/gazebo-archive-keyring.gpg] \
+http://packages.osrfoundation.org/gazebo/ubuntu-stable \
+$(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list
+
+sudo apt update
+
 # 1. Update and Install System Dependencies
 echo "--> Installing system dependencies..."
 sudo apt update && sudo apt install -y \
@@ -39,7 +51,7 @@ cd ../../..
 
 # 4. Install CFLib
 echo "--> Installing crazyflie-lib-python (CFLib)..."
-cd CrazySim/crazyflie-lib-python
+cd crazyflie-lib-python
 # Uninstall existing to ensure clean slate
 pip uninstall -y cflib || true
 export SETUPTOOLS_SCM_PRETEND_VERSION=0.1.0
